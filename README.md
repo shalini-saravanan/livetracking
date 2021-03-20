@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <a>
-<img src="assets/images/screenshot1.png" alt="Webpagescreenshot">
+<img src="https://github.com/shalini-saravanan/livetracking/blob/main/assets/images/Screenshot1.png" alt="Webpagescreenshot">
 </a>
  
 [![Product Name Screen Shot][product-screenshot1]]
