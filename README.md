@@ -36,16 +36,20 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<a>
+<a><br />
 <img src="https://github.com/shalini-saravanan/livetracking/blob/main/assets/images/Screenshot1.png" alt="Webpagescreenshot">
 </a>
+
+<a><br />
+<img src="https://github.com/shalini-saravanan/livetracking/blob/main/assets/images/Screenshot2.png" alt="Webpagescreenshot">
+</a>
+
+<a><br />
+<img src="https://github.com/shalini-saravanan/livetracking/blob/main/assets/images/Screenshot3.png" alt="Webpagescreenshot">
+</a>
  
-[![Product Name Screen Shot][product-screenshot1]]
-[![Product Name Screen Shot][product-screenshot2]]
-[![Product Name Screen Shot][product-screenshot3]]
-
-
-Product Location is tracked by means of carrier's (Truck driver or Delivery persons) Mobile GPS service (An in-built IOT).
+ 
+   Product Location is tracked by means of carrier's (Truck driver or Delivery persons) Mobile GPS service (An in-built IOT).
 
 We have to only specify what are the products for the particular driver. So, the customers can live track their products which is same as the drivers location. When the product load is passed to the next driver, then the next driver's location is tracked for the products.
 Thus, the products are tracked in a chained network in the realtime process.
