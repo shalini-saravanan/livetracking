@@ -24,7 +24,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
-    <li><a href="#Software Required">Software Required</a></li>
+    <li><a href="#software required">Software Required</a></li>
     <li><a href="#How it works ?">How it works ?</a></li>
     <li><a href="#Demo">Demo</a></li>
     <li><a href="#Advantages">Advantages</a></li>
