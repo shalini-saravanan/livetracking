@@ -5,7 +5,7 @@
     <img src="assets/images/logo.png" alt="Logo" width="100" height="60">
   </a>
 
-  <h3 align="center">LIVE TRACKING PROTOTYPE</h3>
+  <h3 align="center">REAL-TIME PACKAGE TRACKING PROTOTYPE</h3>
 
   <p align="center">
     Apogee 2021 - IOT Project Hackathon
