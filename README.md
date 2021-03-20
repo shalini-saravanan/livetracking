@@ -72,9 +72,9 @@ We should specify the packages and their unique ID's to the particular driver's 
 <!-- GETTING STARTED -->
 ## How it works ?
 
-Since the entire project is only a working model, the products ids are are already linked with the specific drivers.All you need to do is login to the website with login credentials (email : shalinisaravanan050@gmail.com and password : asdfghjkl ) and click track button.
+Since the entire project is a working model (Prototype), the package ID's are already linked with the specific driver's accounts. All you need to do is login to the website with login credentials (email : example@gmail.com and password : example ) and click track button of your products.
 
-You will be directed to the map page where you can see the live location of your package.
+You will be directed to the map page, there you can see the live location of your package.
 
 ## Demo
 
@@ -82,17 +82,17 @@ You will be directed to the map page where you can see the live location of your
     
 ## Advantages
 
-* LOW COST
-    Since inbuilt IOT is used, we need to charge only for the app development.
+* <b>Low Cost</b> - 
+    Since inbuilt IOT (Mobile GPS) is used, we need to charge only for the app development.
     
-* LATENCY
-    Since real time database is used, location is fast & accurate.
+* <b>High Latency</b> - 
+    Since Real-Time database is used, location is fast & accurate.
 
-* SCALABITY
+* <b>Scalability</b> - 
     Idea can further be extended in all means - Roadways, Railways, Waterways & Airways as well.
 
-* UNIQUENESS
-    No separate GPS are used instead mobile GPS is tracked.
+* <b>Uniqueness</b>
+    Mobile GPS is used for tracking instead of using separate GPS.
     
 
 <!-- TEAM -->
