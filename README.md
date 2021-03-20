@@ -37,6 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<img src="assets/images/screenshot1.png" alt="Webpagescreenshot">
 [![Product Name Screen Shot][product-screenshot1]]
 [![Product Name Screen Shot][product-screenshot2]]
 [![Product Name Screen Shot][product-screenshot3]]
@@ -104,8 +105,6 @@ Project Link: [our webapp link](https://www.google.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot1]: assets/images/screenshot1.png
 [product-screenshot2]: assets/images/screenshot2.png
 [product-screenshot3]: assets/images/screenshot3.png
