@@ -72,7 +72,7 @@ We should specify the packages and their unique ID's to the particular driver's 
 <!-- GETTING STARTED -->
 ## How it works ?
 
-Since the entire project is a working model (Prototype), the package ID's are already linked with the specific driver's accounts. All you need to do is login to the website with login credentials (email : example@gmail.com and password : example ) and click track button of your products.
+Since the entire project is a working model (Prototype), the package ID's are already linked with the specific driver's accounts. All you need to do is login to the website with login credentials (email : sample@gmail.com and password : sample ) and click track button of your products.
 
 You will be directed to the map page, there you can see the live location of your package.
 
