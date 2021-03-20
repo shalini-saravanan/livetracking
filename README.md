@@ -49,26 +49,25 @@
 </a>
  
  
-   Product Location is tracked by means of carrier's (Truck driver or Delivery persons) Mobile GPS service (An in-built IOT).
+   Package location is tracked by means of carrier’s (Truck Driver or local Delivery person's) mobile GPS in a chained network as the Product ID  is embedded with driver’s GPS data in the database.
 
-We have to only specify what are the products for the particular driver. So, the customers can live track their products which is same as the drivers location. When the product load is passed to the next driver, then the next driver's location is tracked for the products.
-Thus, the products are tracked in a chained network in the realtime process.
+We should specify the packages and their unique ID's to the particular driver's GPS enabled Mobile App. The customers can track their packages in Real-Time by tracking the driver's location. Since the packages have unique ID's, When the package is shifted to the next driver, the new driver's location is tracked and the current driver's location is cut-off. Thus, the packages are tracked in a chained network in the Real-Time process.
 
 
 ## Software Required
 
-*  A mobile application for the drivers (Product carriers)
+*  A Mobile Application for the drivers ( Package carriers )
       * Flutter
       * Dart
 
-*  A web app for the customers
+*  A Web App for the customers ( Clients )
       * HTML
       * CSS
+      
+*  Backened Technologies
+      * Firebase (Database)
       * Javascript
       * JQuery
-      
-*  Backened Tool
-      * Firebase
 
 <!-- GETTING STARTED -->
 ## How it works ?
