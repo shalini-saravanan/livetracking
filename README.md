@@ -59,6 +59,7 @@ Thus, the products are tracked in a chained network in the realtime process.
 
 *  A mobile application for the drivers (Product carriers)
       * Flutter
+      * Dart
 
 *  A web app for the customers
       * HTML
