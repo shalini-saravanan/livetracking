@@ -91,7 +91,7 @@ You will be directed to the map page, there you can see the live location of you
 * <b>Scalability</b> - 
     Idea can further be extended in all means - Roadways, Railways, Waterways & Airways as well.
 
-* <b>Uniqueness</b>
+* <b>Uniqueness</b> - 
     Mobile GPS is used for tracking instead of using separate GPS.
     
 
