@@ -72,12 +72,35 @@ We should specify the packages and their unique ID's to the particular driver's 
 
 Since the entire project is a working model (Prototype), the package ID's are already linked with the specific driver's accounts. All you need to do is login to the website with login credentials (email : sample@gmail.com and password : sample ) and click track button of your products.
 
-You will be directed to the map page, there you can see the live location of your package.
+The front end is completely built with HTML and CSS. For the database, we used 'FIRESTORE real time database'.
+The front end part is connected to the database and it is accessed by json coding.
+
+First, we have to login to our account.For that,  We use the already registered login credentials (here I use 
+sample@gmail.com as the username and sample as the password).
+
+Once the login details match with the already registered data in the database, we will be directed to our orders 
+page directly.
+
+In the order page, what are all the products ordered by the particular user will be displayed along with its 
+details and a 'Track order' button.
+
+When we click on that button, we will be directed to another page where the google map live location of that 
+particular product is shown.
+
+As a part of the backend process, we will be installing an app in the carrier's mobile phone in order to track the location of products.
+
+The app is made using flutter and dart languages. We have choosen this because Flutter is Google's mobile app SDK, complete with a framework, 
+widgets, and tools, that gives us an easy way to build and deploy visually attractive,fast mobile apps on both Android and iOS platforms.
+
+The app collects the latitude and longitude data with help of google maps and GPS and sends that data to firebase. Then the data is retrieved 
+from the firebase into the web application which is then displayed to the client.
+
+So, the users can track their product locations in a much simpler way. 
 
 ## Advantages
 
 * <b>Low Cost</b> - 
-    Since inbuilt IOT (Mobile GPS) is used, we need to charge only for the app development.
+    Since there is no requirement for any hardware products, our application is highly cost effictive. Also we will be using inbuilt GPS for tracking purposes, which further reduces the cost of installation of any external GPS modules.  
     
 * <b>High Latency</b> - 
     Since Real-Time database is used, location is fast & accurate.
