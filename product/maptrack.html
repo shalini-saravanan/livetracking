@@ -1,7 +1,7 @@
-<!doctype html>
-<html class="no-js" lang="en">
-	<head>
-		<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>My Orders - POIUYTRE</title>
 		<meta name="description" content="">
@@ -42,67 +42,40 @@
 		<link rel="stylesheet" href="css/responsive.css">
 		<!-- modernizr css -->
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
-	</head>
-	<body>	
-		<!-- WRAPPER START -->
-		<div class="wrapper bg-dark-white">
-
-			<!-- HEADER-AREA START -->
-			<header id="sticky-menu" class="header header-2">
-				<div class="header-area" style="height:60px">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-8" style="float:left;">
-								
-									<img src="img/logo/logo.png" alt="" />&emsp; <b style="font-size: 15px">POIUYTRE</b>
-                                
-                            </div>
-                            <div class="col-md-4" style="float:right;">
-                                <br>
-								    <input type="text" placeholder="Search here..." style="width:200px; height:30px"/>
-									<button>
-										<i class="zmdi zmdi-search"></i>
-									</button>
-							
-							<div style="float:right;">
-                               <button class="button-one submit-btn-4" onclick="logout()" data-text="Logout" style="width:100px;">Logout</button><br> 
-								
-							</div>
-                            </div>
-						</div>
-					</div>
-				</div>
-				
-			</header>
-			<!-- HEADER-AREA END -->
-			
-			<!-- PRODUCT-AREA START -->
-			<div class="product-area pt-80 pb-80 product-style-2">
-				<div class="container">
-					<div class="row">
-						
-						<div class="col-md-12">
-							<!-- Shop-Content End -->
-							
-                            <div class="row shop-list">
-											<!-- Single-product start -->
-											<div class="col-lg-12">
-												<div class="single-product clearfix">
-													
-													Map will come here....
-												</div>
-											</div>
-                            </div>
-                            
-                            
-							<!-- Shop-Content End -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- PRODUCT-AREA END -->
-			<!-- FOOTER START -->
-			<footer>
+        <style>
+            #map {
+                height: 100%;
+            }
+ 
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+ 
+            #over_map {
+                position: absolute;
+                top: 10px;
+                left: 89%;
+                z-index: 99;
+                background-color: #ccffcc;
+                padding: 10px;
+            }
+        </style>
+    </head>
+ 
+    <body>
+          
+        <div id="map"></div>
+ 
+        <div id="over_map">
+            <div>
+                <span>Live Tracing:1 </span><span id="cars">0</span>
+            </div>
+        </div>
+         
+         
+ <footer>
 				<!-- Footer-area start -->
 				<div class="footer-area footer-3">
 					<div class="container">
@@ -180,49 +153,13 @@
 			</footer>
 			<!-- FOOTER END -->
 			
-		</div>
-		<!-- WRAPPER END -->
-
-		<!-- all js here -->
-		<!-- jquery latest version -->
-		<script src="js/vendor/jquery-1.12.0.min.js"></script>
-		<!-- bootstrap js -->
-		<script src="js/bootstrap.min.js"></script>
-		<!-- jquery.meanmenu js -->
-		<script src="js/jquery.meanmenu.js"></script>
-		<!-- slick.min js -->
-		<script src="js/slick.min.js"></script>
-		<!-- jquery.treeview js -->
-		<script src="js/jquery.treeview.js"></script>
-		<!-- lightbox.min js -->
-		<script src="js/lightbox.min.js"></script>
-		<!-- jquery-ui js -->
-		<script src="js/jquery-ui.min.js"></script>
-		<!-- jquery.nivo.slider js -->
-		<script src="lib/js/jquery.nivo.slider.js"></script>
-		<script src="lib/home.js"></script>
-		<!-- jquery.nicescroll.min js -->
-		<script src="js/jquery.nicescroll.min.js"></script>
-		<!-- countdon.min js -->
-		<script src="js/countdon.min.js"></script>
-		<!-- wow js -->
-		<script src="js/wow.min.js"></script>
-		<!-- plugins js -->
-		<script src="js/plugins.js"></script>
-		<!-- main js -->
-		<script src="js/main.js"></script>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
         <script>
-    function logout(){
-        firebase.auth().signOut();
-        window.location.href="../index.html";
-    }
-        
-        </script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+            // Replace your Configuration here..
+            const firebaseConfig = {
   apiKey: "AIzaSyA72oaWLYsSUoRwH1FKpYa0VEII1xrWOW0",
   authDomain: "userauth-308104.firebaseapp.com",
   projectId: "userauth-308104",
@@ -231,20 +168,84 @@ const firebaseConfig = {
   appId: "1:890910289367:web:6d4cef4dfad3547c5f6f92",
   measurementId: "G-SY1GGS8M3W"
 };
-    firebase.initializeApp(firebaseConfig);
-  </script>
+            firebase.initializeApp(firebaseconfig);
+        </script>
+ 
+        <script>
+ 
+            // counter for online cars...
+            var cars_count = 0;
+            // markers array to store all the markers, so that we could remove marker when any car goes offline and its data will be remove from realtime database...
+            var markers;
+            var map;
+            function initMap() { // Google Map Initialization... 
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 8,
+                    center: new google.maps.LatLng(23.034, 74.56),
+                    mapTypeId: 'terrain'
+                });
+            }
+ 
+             
+             function ShowLocation(lat,lng) {
+                 
+            if(markers!=null){
+                markers.setMap(null);
+            }
+             
+ 
+                var uluru = { lat: lat, lng: lng };
+ 
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    title:'Live Location',
+                    map: map
+                });
+                map.setZoom(17);
+                map.panTo(marker.position);
+                markers = marker; // add marker 
+            }
+ 
+ 
+            // get firebase database reference.
+            var loc_ref= firebase.database().ref("locations");
+    //------------------------------------------------------------------------------------
+            loc_ref.on('value',gotData,errData);
+            var curr_lat; var curr_lng;
+            function gotData(data){
+                console.log(data.val());
+                var locations= data.val();
+                var user_id = getUrlParameter('id');
+                console.log("user_id is: "+user_id);
+                curr_lat=locations[user_id].latitude;
+                curr_lng=locations[user_id].longitude;
+                console.log("current_latitude:"+parseFloat(curr_lat)+" && current_longitude: " +parseFloat(curr_lng));
+                ShowLocation(parseFloat(curr_lat),parseFloat(curr_lng));
+            }
+ 
+            function errData(err){
+                console.log('error: '+err);
+            }
+    //---------------------------------------------------------------------------------------
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+ 
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+ 
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+        };
+ 
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8HdkhY4Iy8jo4bM0uIJVnaekAw7A0Xm8&amp;callback=initMap">
+        </script>
         
-  <script>
-      
-      var url_string = window.location.href; 
-      var url = new URL(url_string);
-      var pid = url.searchParams.get("id");
-      
-      
-  </script>
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	</body>
+ 
+    </body>
 </html>
