@@ -10,8 +10,7 @@
   <p align="center">
     Apogee 2021 - IOT Project Hackathon
     <br /><br />
-    <a href="#"><strong>Visit Site</strong></a>
-    <br />
+    
     </p>
 </p>
 
@@ -26,7 +25,6 @@
     </li>
     <li><a href="#software required">Software Required</a></li>
     <li><a href="#How it works ?">How it works ?</a></li>
-    <li><a href="#Demo">Demo</a></li>
     <li><a href="#Advantages">Advantages</a></li>
     <li><a href="#TEAM POIUYTRE - DETAILS">TEAM POIUYTRE - DETAILS</a></li>
   </ol>
@@ -76,10 +74,6 @@ Since the entire project is a working model (Prototype), the package ID's are al
 
 You will be directed to the map page, there you can see the live location of your package.
 
-## Demo
-
-* Visit our website [https://example.com](https://example.com)
-    
 ## Advantages
 
 * <b>Low Cost</b> - 
@@ -104,8 +98,7 @@ You will be directed to the map page, there you can see the live location of you
  
  * Shalini S - [Linkedin](https://www.linkedin.com/in/shalini-saravanan/)
  
- 
-Project Link: [our webapp link](https://www.google.com)
+
 
 
 
